@@ -63,6 +63,7 @@ ul {
 
 /*custom css*/
 input[type="text"] {
+  width: 200px;
   padding: 10px;
   border: 1px solid #ECECEC;
 }
@@ -80,4 +81,16 @@ input[type="text"] {
 p {
   display: inherit;
   margin-left: 5px;
+}
+
+.typingMessaje p {
+  margin-left: 0px !important;
+  color: silver;
+  font-size: 0.8em;
+}
+
+.centerDiv {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }

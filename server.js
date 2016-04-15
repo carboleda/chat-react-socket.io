@@ -85,6 +85,16 @@ io.on('connection', function(socket) {
     msg.id = Date.now();
     io.emit('chat message', msg);
   });
+
+  socket.on('typing on', function(typing){
+    console.log('typing on: ', typing);
+    socket.broadcast.emit('typing on', typing.author + ' is typing...');
+  }); 
+
+  socket.on('typing off', function(){
+    console.log('typing off: ');
+    socket.broadcast.emit('typing off');
+  });  
 });
 //=================== SOCKET.IO ===================
 
